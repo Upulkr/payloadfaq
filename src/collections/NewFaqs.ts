@@ -1,0 +1,55 @@
+import type { CollectionConfig } from 'payload'
+
+export const NewFaqs: CollectionConfig = {
+  slug: 'new-faqs-collection',
+  fields: [
+    // You might want a slug or identifier for the FAQ itself
+    {
+      name: 'slug',
+      type: 'text',
+      label: 'FAQ Identifier',
+      required: true,
+      unique: true,
+    },
+    {
+      name: 'translations',
+      type: 'array',
+      label: 'Translations for this FAQ',
+      minRows: 1,
+      fields: [
+        {
+          name: 'title',
+          type: 'text',
+          label: 'FAQ Title',
+          required: true,
+        },
+        {
+          name: 'description',
+          type: 'textarea',
+          label: 'FAQ Description',
+          required: true,
+        },
+        {
+          name: 'language',
+          type: 'select',
+          label: 'Language',
+          required: true,
+          options: [
+            {
+              label: 'English',
+              value: 'en',
+            },
+            {
+              label: 'Tamil',
+              value: 'ta',
+            },
+            {
+              label: 'Sinhala',
+              value: 'si',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}
