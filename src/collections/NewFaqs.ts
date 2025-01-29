@@ -29,6 +29,7 @@ export const NewFaqs: CollectionConfig = {
           label: 'FAQ Description',
           required: true,
         },
+
         {
           name: 'language',
           type: 'select',
@@ -48,6 +49,17 @@ export const NewFaqs: CollectionConfig = {
               value: 'si',
             },
           ],
+        },
+        {
+          name: 'videoThumbnail',
+          type: 'upload',
+          label: 'Video Thumbnail',
+          relationTo: 'media',
+        },
+        {
+          name: 'videoUrl',
+          type: 'text',
+          label: 'Video URL',
         },
       ],
     },

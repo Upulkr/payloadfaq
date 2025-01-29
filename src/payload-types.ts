@@ -107,6 +107,8 @@ export interface NewFaqsCollection {
         title: string;
         description: string;
         language: 'en' | 'ta' | 'si';
+        videoThumbnail?: (number | null) | Media;
+        videoUrl?: string | null;
         id?: string | null;
       }[]
     | null;
@@ -219,6 +221,8 @@ export interface NewFaqsCollectionSelect<T extends boolean = true> {
         title?: T;
         description?: T;
         language?: T;
+        videoThumbnail?: T;
+        videoUrl?: T;
         id?: T;
       };
   updatedAt?: T;
