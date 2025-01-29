@@ -52,9 +52,9 @@ export const NewFaqs: CollectionConfig = {
         },
         {
           name: 'videoThumbnail',
-          type: 'upload',
-          label: 'Video Thumbnail',
-          relationTo: 'media',
+          type: 'text',
+
+          label: 'image url',
         },
         {
           name: 'videoUrl',

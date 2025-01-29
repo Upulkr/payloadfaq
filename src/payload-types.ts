@@ -107,7 +107,7 @@ export interface NewFaqsCollection {
         title: string;
         description: string;
         language: 'en' | 'ta' | 'si';
-        videoThumbnail?: (number | null) | Media;
+        videoThumbnail?: string | null;
         videoUrl?: string | null;
         id?: string | null;
       }[]
