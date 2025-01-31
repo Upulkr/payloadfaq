@@ -33,7 +33,7 @@ export const NewFaqs: CollectionConfig = {
           name: 'steps',
           type: 'array',
           label: 'Steps',
-          minRows: 1,
+
           required: false,
           fields: [
             {

@@ -105,7 +105,13 @@ export interface NewFaqsCollection {
   translations?:
     | {
         title: string;
-        description: string;
+        description?: string | null;
+        steps?:
+          | {
+              step?: string | null;
+              id?: string | null;
+            }[]
+          | null;
         language: 'en' | 'ta' | 'si';
         videoThumbnail?: string | null;
         videoUrl?: string | null;
@@ -220,6 +226,12 @@ export interface NewFaqsCollectionSelect<T extends boolean = true> {
     | {
         title?: T;
         description?: T;
+        steps?:
+          | T
+          | {
+              step?: T;
+              id?: T;
+            };
         language?: T;
         videoThumbnail?: T;
         videoUrl?: T;
