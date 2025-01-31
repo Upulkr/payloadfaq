@@ -27,7 +27,22 @@ export const NewFaqs: CollectionConfig = {
           name: 'description',
           type: 'textarea',
           label: 'FAQ Description',
-          required: true,
+          required: false,
+        },
+        {
+          name: 'steps',
+          type: 'array',
+          label: 'Steps',
+          minRows: 1,
+          required: false,
+          fields: [
+            {
+              name: 'step',
+              type: 'text',
+              label: 'Step',
+              required: false,
+            },
+          ],
         },
 
         {
